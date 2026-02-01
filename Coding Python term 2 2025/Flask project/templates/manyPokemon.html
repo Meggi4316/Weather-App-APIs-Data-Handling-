@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(215, 250, 248);
+        }
+
+        .card {
+            width: 920px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            display: block;
+            overflow: auto;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Pokedex</title>
+</head>
+
+<body>
+
+
+    {% for pok in pokemon%}
+    <div class="card">
+        <img src={{pok["image"]["hires"]}} width="200px" height="200px">
+        <div style="float: right; width: 700px;">
+            <h1>{{pok["name"]["english"]}}</h1>
+            <p>ID: {{pok["id"]}}</p>
+            <p>Type: {{pok["type"]}}</p>
+            <p>Species: {{pok["species"]}}</p>
+            <p>{{pok["description"]}}</p>
+        </div>
+    </div>
+    {% endfor %}
+
+</body>
+</html>

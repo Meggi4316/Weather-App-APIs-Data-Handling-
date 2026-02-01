@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(215, 250, 248);
+        }
+    </style>
+    <title>{{pok["name"]["english"]}}</title>
+</head>
+
+<body>
+    <form method="post">
+        <label for="pokemon-id">Select a pokemon by ID:</label>
+        <input id="pokemon-id" name="id" />
+        <button type="submit">Submit</button>
+</form>
+
+
+
+    <h1>{{pok["name"]["english"]}}</h1>
+    <p>ID: {{pok["id"]}}</p>
+    <p>Type: {{pok["type"]}}</p>
+    <p>Species: {{pok["species"]}}</p>
+    <p>{{pok["description"]}}</p>
+    <img src={{pok["image"]["hires"]}}>
+   
+</body>
+
+</html>
